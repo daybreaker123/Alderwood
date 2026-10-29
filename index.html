@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alderwood | Practical AI consulting and implementation</title>
+    <title>Alderwood | Automate the work your team already repeats</title>
     <meta
       name="description"
-      content="Alderwood helps mid-size companies find where operations lose time and money, then implements AI agents, automations, and integrations. Free company analysis."
+      content="Alderwood helps mid-size companies automate the work their teams already repeat, with agents, automations, and integrations. Free company analysis."
     >
     <meta name="theme-color" content="#f4efe6">
     <meta property="og:title" content="Alderwood">
@@ -39,6 +39,7 @@
         </a>
         <nav id="site-nav" class="site-nav" aria-label="Primary">
           <a href="#who">Who we serve</a>
+          <a href="#task">A task</a>
           <a href="#services">Services</a>
           <a href="#process">Process</a>
           <a href="#about">About</a>
@@ -70,14 +71,15 @@
         <div class="wrap hero-grid">
           <div class="hero-copy">
             <p class="kicker">AI consulting and implementation</p>
-            <h1>Practical AI, built around how your company already works.</h1>
+            <h1>Automate the work your team already repeats.</h1>
             <p class="lede">
+              <span class="lede-lead">Practical AI, built around how your company already works.</span>
               Alderwood helps mid-size companies move from a clear view of their workflows to systems in daily use. We find where AI can take on real work, then plan and implement agents, automations, and integrations with the software you already use. We stay to help your team adopt what we built and keep it running.
             </p>
             <p class="audience">For companies typically valued between $10 and $50 million, in any industry.</p>
             <div class="hero-actions">
               <a class="btn" href="#conversation">Book an introductory conversation</a>
-              <a class="text-link" href="#process">See the process</a>
+              <a class="text-link" href="#task">See a task run</a>
             </div>
           </div>
 
@@ -96,6 +98,154 @@
             <p class="card-foot">No charge. It follows a short introductory conversation.</p>
             <a class="text-link" href="#conversation">Request the analysis</a>
           </aside>
+        </div>
+      </section>
+
+      <section id="task" class="section" aria-labelledby="task-title">
+        <div class="wrap">
+          <div class="split section-head">
+            <h2 id="task-title">Watch a task run</h2>
+            <p class="prose">
+              The work changes from company to company. The shape is familiar: something arrives, a system carries the steps that repeat, your existing software is updated, and a person handles what needs a decision.
+            </p>
+          </div>
+
+          <div class="task-stage">
+            <div class="task-tabs" role="tablist" aria-label="Example tasks">
+              <button type="button" role="tab" id="tab-invoice" aria-controls="panel-invoice" aria-selected="true">Invoice intake</button>
+              <button type="button" role="tab" id="tab-request" aria-controls="panel-request" aria-selected="false" tabindex="-1">Customer request</button>
+              <button type="button" role="tab" id="tab-report" aria-controls="panel-report" aria-selected="false" tabindex="-1">Weekly report</button>
+            </div>
+
+            <div class="task-panel" role="tabpanel" id="panel-invoice" aria-labelledby="tab-invoice">
+              <div class="flow-wrap">
+              <ol class="flow">
+                <li data-kind="start">
+                  <span class="node" aria-hidden="true"></span>
+                  <p class="role">Starts</p>
+                  <h3>It arrives</h3>
+                  <p class="step-detail">An invoice lands in a shared inbox.</p>
+                </li>
+                <li data-kind="system">
+                  <span class="node" aria-hidden="true"></span>
+                  <p class="role">System</p>
+                  <h3>It is read</h3>
+                  <p class="step-detail">An agent pulls the vendor, the amount, and the due date.</p>
+                </li>
+                <li data-kind="software">
+                  <span class="node" aria-hidden="true"></span>
+                  <p class="role">Your software</p>
+                  <h3>It is checked</h3>
+                  <p class="step-detail">The invoice is matched to a purchase record in the accounting software you already use.</p>
+                </li>
+                <li data-kind="person">
+                  <span class="node" aria-hidden="true"></span>
+                  <p class="role">A person</p>
+                  <h3>Exceptions stop</h3>
+                  <p class="step-detail">A clean match is recorded. Anything off is sent to a person, with the invoice attached.</p>
+                </li>
+                <li data-kind="done">
+                  <span class="node" aria-hidden="true"></span>
+                  <p class="role">Done</p>
+                  <h3>The record is current</h3>
+                  <p class="step-detail">The team can see the status without typing the invoice in again.</p>
+                </li>
+              </ol>
+              <span class="flow-token" aria-hidden="true">
+                <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16.7" cy="15.4" r="7.1" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="16.3" r="2.2" fill="currentColor"/></svg>
+              </span>
+              </div>
+            </div>
+
+            <div class="task-panel" role="tabpanel" id="panel-request" aria-labelledby="tab-request" hidden>
+              <div class="flow-wrap">
+              <ol class="flow">
+                <li data-kind="start">
+                  <span class="node" aria-hidden="true"></span>
+                  <p class="role">Starts</p>
+                  <h3>A request comes in</h3>
+                  <p class="step-detail">Someone writes by email or fills in a form.</p>
+                </li>
+                <li data-kind="system">
+                  <span class="node" aria-hidden="true"></span>
+                  <p class="role">System</p>
+                  <h3>It is identified</h3>
+                  <p class="step-detail">An agent names the account and what is being asked.</p>
+                </li>
+                <li data-kind="software">
+                  <span class="node" aria-hidden="true"></span>
+                  <p class="role">Your software</p>
+                  <h3>The account is opened</h3>
+                  <p class="step-detail">The workflow looks the account up in the system your team already uses.</p>
+                </li>
+                <li data-kind="person">
+                  <span class="node" aria-hidden="true"></span>
+                  <p class="role">A person</p>
+                  <h3>The unusual ones wait</h3>
+                  <p class="step-detail">A routine request gets a drafted reply and an updated record. An unusual one is handed to someone on the team.</p>
+                </li>
+                <li data-kind="done">
+                  <span class="node" aria-hidden="true"></span>
+                  <p class="role">Done</p>
+                  <h3>It has a status</h3>
+                  <p class="step-detail">The request is tracked, so nobody is chasing it through inboxes.</p>
+                </li>
+              </ol>
+              <span class="flow-token" aria-hidden="true">
+                <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16.7" cy="15.4" r="7.1" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="16.3" r="2.2" fill="currentColor"/></svg>
+              </span>
+              </div>
+            </div>
+
+            <div class="task-panel" role="tabpanel" id="panel-report" aria-labelledby="tab-report" hidden>
+              <div class="flow-wrap">
+              <ol class="flow">
+                <li data-kind="start">
+                  <span class="node" aria-hidden="true"></span>
+                  <p class="role">Starts</p>
+                  <h3>The week closes</h3>
+                  <p class="step-detail">The same operating update is due again.</p>
+                </li>
+                <li data-kind="system">
+                  <span class="node" aria-hidden="true"></span>
+                  <p class="role">System</p>
+                  <h3>Figures are gathered</h3>
+                  <p class="step-detail">The workflow pulls the numbers from the tools that already hold them.</p>
+                </li>
+                <li data-kind="software">
+                  <span class="node" aria-hidden="true"></span>
+                  <p class="role">Your software</p>
+                  <h3>The source stays put</h3>
+                  <p class="step-detail">Sales, delivery, or finance data is read where it already lives. Nothing is retyped into a spreadsheet.</p>
+                </li>
+                <li data-kind="person">
+                  <span class="node" aria-hidden="true"></span>
+                  <p class="role">A person</p>
+                  <h3>A draft is checked</h3>
+                  <p class="step-detail">The update is assembled in the usual format. Someone reviews it before it goes out.</p>
+                </li>
+                <li data-kind="done">
+                  <span class="node" aria-hidden="true"></span>
+                  <p class="role">Done</p>
+                  <h3>The update is sent</h3>
+                  <p class="step-detail">The report goes out without being rebuilt by hand.</p>
+                </li>
+              </ol>
+              <span class="flow-token" aria-hidden="true">
+                <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16.7" cy="15.4" r="7.1" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="16.3" r="2.2" fill="currentColor"/></svg>
+              </span>
+              </div>
+            </div>
+
+            <div class="task-now">
+              <p class="task-kicker" id="task-step-label">Step 1 of 5</p>
+              <p class="task-now-text" aria-live="polite">An invoice lands in a shared inbox.</p>
+            </div>
+            <div class="task-actions">
+              <button type="button" class="btn" id="run-task">Run this task</button>
+              <p class="task-note">An example, so you can picture a task in your own company. Choose a step to inspect it.</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -299,7 +449,7 @@
             </svg>
             Alderwood
           </a>
-          <p>AI consulting and implementation for mid-size companies.</p>
+          <p class="footer-slogan">Automate the work your team already repeats.</p>
         </div>
           <p class="footer-meta">
             <a href="mailto:hello@alderwood.com">hello@alderwood.com</a><br>

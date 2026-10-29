@@ -295,6 +295,17 @@ h1 {
   font-size: 1.08rem;
 }
 
+.lede-lead {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 560;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+}
+
 .audience {
   margin-top: 1rem;
   color: var(--muted);
@@ -685,6 +696,204 @@ h2 {
   overflow: hidden;
 }
 
+.task-stage {
+  background: var(--card);
+  border: 1px solid var(--line-strong);
+  border-radius: 18px;
+  padding: clamp(1.15rem, 2.4vw, 1.85rem);
+  box-shadow: var(--shadow);
+}
+
+.task-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.35rem;
+}
+
+.task-tabs button {
+  min-height: 40px;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.task-tabs button[aria-selected="true"] {
+  background: var(--forest);
+  border-color: transparent;
+  color: #f6f1e7;
+}
+
+.task-tabs button:hover:not([aria-selected="true"]) {
+  color: var(--ink);
+  border-color: var(--moss);
+}
+
+.flow-wrap {
+  position: relative;
+}
+
+.flow {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 0;
+  padding: 2.6rem 0 0;
+  position: relative;
+}
+
+.flow::before {
+  content: "";
+  position: absolute;
+  top: 0.72rem;
+  left: 1.1rem;
+  right: 1.1rem;
+  height: 1px;
+  background: var(--line-strong);
+}
+
+.flow li {
+  position: relative;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.flow .node {
+  position: absolute;
+  top: -2.35rem;
+  left: 0.15rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--line-strong);
+  background: var(--card);
+  z-index: 1;
+}
+
+.flow li.is-done .node,
+.flow li.is-current .node {
+  border-color: var(--forest);
+  background: var(--forest);
+}
+
+.flow .role {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.flow li[data-kind="system"] .role,
+.flow li[data-kind="software"] .role {
+  color: var(--moss);
+}
+
+.flow li[data-kind="person"] .role {
+  color: var(--honey);
+}
+
+.flow h3 {
+  font-family: var(--sans);
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+  margin-bottom: 0.35rem;
+}
+
+.flow .step-detail {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.flow li.is-current .step-detail {
+  color: var(--ink-soft);
+}
+
+.flow-token {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--forest);
+  box-shadow: 0 0 0 1px rgba(26, 60, 50, 0.28);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.7s ease, opacity 0.2s ease;
+}
+
+.flow-token.is-placed {
+  opacity: 1;
+}
+
+.flow-token svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.task-now {
+  margin-top: 1.35rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.task-kicker {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin-bottom: 0.3rem;
+}
+
+.task-now-text {
+  font-family: var(--serif);
+  font-weight: 520;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  letter-spacing: -0.03em;
+  line-height: 1.3;
+  max-width: 40rem;
+}
+
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.25rem;
+  margin-top: 1.15rem;
+}
+
+.task-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  max-width: 36rem;
+}
+
+.footer-slogan {
+  font-family: var(--serif);
+  font-weight: 520;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  font-size: 1.05rem;
+}
+
 .site-footer {
   padding: 1.75rem 0 2.25rem;
   border-top: 1px solid var(--line);
@@ -744,6 +953,34 @@ h2 {
 
   .num {
     grid-row: 1 / span 2;
+  }
+
+  .flow {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0.2rem 0 0 0.15rem;
+  }
+
+  .flow::before {
+    top: 0.55rem;
+    bottom: 0.55rem;
+    left: 0.52rem;
+    right: auto;
+    width: 1px;
+    height: auto;
+  }
+
+  .flow li {
+    padding: 0 0 1.15rem 1.85rem;
+  }
+
+  .flow li:last-child {
+    padding-bottom: 0;
+  }
+
+  .flow .node {
+    top: 0.15rem;
+    left: 0;
   }
 }
 
